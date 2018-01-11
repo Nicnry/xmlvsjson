@@ -31,8 +31,8 @@ JSON (JavaScript Object Notation) est une syntaxe utilisant la notation d’obje
 XML et JSON sont similaire car ils sont auto-descriptif (compréhensible par un humain) 
 ```xml
 <person> 
-<age>12</age> 
-<name>Danielle</name> 
+  <age>12</age> 
+  <name>Danielle</name> 
 </person>
 ```
 ```json

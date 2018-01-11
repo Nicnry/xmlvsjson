@@ -1,5 +1,11 @@
 # xml vs json
 
+<img src="/img/json.png"></img>
+
+<img src="/img/xml.png"></img>
+
+<img src="/img/xml.png"></img>
+
 ## Table des matières
 - XML
 - JSON
@@ -105,6 +111,8 @@ XML et JSON sont similaire car ils peuvent être récupéré avec une XMLHttpReq
 Le JSON est plus simple et plus rapide à lire que le XML. Il est possible d’utiliser des tableaux dans le JSON. Le JSON est aussi plus court et n’utilise pas de balise. La différence la plus importante entre le JSON et le XML est que le XML doit utiliser un ‘’parseur’’ XML pour pouvoir être utilisé tandis que le JSON peut être utilisé par une fonction de base de JavaScript.
 
 ## JSON est différent du XML car
+
+Le JSON est plus simple et plus rapide à lire que le XML. Il est possible d’utiliser des tableaux dans le JSON. Le JSON est aussi plus court et n’utilise pas de balise. La différence la plus importante entre le JSON et le XML est que le XML doit utiliser un ‘’parseur’’ XML pour pouvoir être utilisé tandis que le JSON peut être utilisé par une fonction de base de JavaScript.
 
 ## Pourquoi JSON est meilleur que le XML
 

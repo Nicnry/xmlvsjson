@@ -1,0 +1,44 @@
+<voitures>
+    <voiture>
+        <marque>Ford</marque>
+        <modele>Ranger</modele>
+        <type>Pick-Up</type>
+        <carosserie>Cabine Double</carosserie>
+        <serie>Limited</serie>
+        <caracteristiques>
+            <CapVolumetrique>3.2TD</CapVolumetrique>
+            <puissance>200 CH</puissance>
+            <transmission>4x4</transmission>
+        </caracteristiques>
+        <couleur>Colorado Red</couleur>
+        <options>
+            <exterieur>Couvre-benne en 1 partie, aluminium</exterieur>
+            <mecanique>Dispositif d'attelage</mecanique>
+        </options>
+        <prix>
+            <ht>43'335 CHF</ht>
+            <ttc>46'672 CHF</ttc>
+        <prix>
+    </voiture>
+    <voiture>
+        <marque>Ford</marque>
+        <modele>GT</modele>
+        <type>Supercar</type>
+       <carosserie>Coupé 2-portes</carosserie>
+        <serie>Heritage Edition 66</serie>
+        <caracteristiques>
+            <CapVolumetrique>3.5L V6 GTDI </CapVolumetrique>
+            <puissance>647 CH</puissance>
+            <transmission>Propulsion</transmission>
+        </caracteristiques>
+        <couleur>Noir Mat</couleur>
+        <options>
+            <exterieur>Finition fibre de carbone</exterieur>
+            <interieur>Cabine passager en fibre de carbone finition mate</interieur>
+        </options>
+        <prix>
+            <ht>Sur demande</ht>
+            <ttc>Sur demande</ttc>
+        <prix>
+    </voiture>
+</voitures>

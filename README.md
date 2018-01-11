@@ -1,7 +1,9 @@
 # xml vs json
 <div align="center">
 <img src="/img/json.png"></img>
+</br>
 <img src="/img/vs.png"></img>
+</br>
 <img src="/img/xml.png"></img>
 </div>
 

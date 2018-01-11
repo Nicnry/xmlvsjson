@@ -17,11 +17,11 @@
 
 ## XML
 
-XML (eXtensible Markup Language) est un langage qui permet de décrire des données à l’aide de balises et de règles que l’on peut personnaliser.
+XML (e**X**tensible **M**arkup **L**anguage) est un langage qui permet de décrire des données à l’aide de balises et de règles que l’on peut personnaliser.
 
 ## JSON
 
-JSON (JavaScript Object Notation) est une syntaxe utilisant la notation d’objet JavaScript pour stocker et échanger des données.
+JSON (**J**ava**S**cript **O**bject **N**otation) est une syntaxe utilisant la notation d’objet JavaScript pour stocker et échanger des données.
 
 ### Utilisations
 
@@ -129,9 +129,9 @@ Avec JSON:
 
 ## Gloassaire 
 
-| Mot   | Définition                        |
-|-------|-----------------------------------|
-| JSON  | JavaScript Object Notation        |
-| XML   | EXtensible Markup Language        |
-| AJAX  | Asynchronous JavaScript And XML   |
-| DOM   | Document Object Model             |
+| Mot   | Définition                        			|
+|-------|-------------------------------------------------------|
+| JSON  | **J**ava**S**cript **O**bject **N**otation     	|
+| XML   | E**X**tensible **M**arkup **L**anguage        	|
+| AJAX  | **A**synchronous **J**avaScript **A**nd **X**ML	|
+| DOM   | **D**ocument **O**bject **M**odel             	|

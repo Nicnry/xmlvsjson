@@ -18,7 +18,7 @@
         <prix>
             <ht>43'335 CHF</ht>
             <ttc>46'672 CHF</ttc>
-        <prix>
+        </prix>
     </voiture>
     <voiture>
         <marque>Ford</marque>
@@ -39,6 +39,6 @@
         <prix>
             <ht>Sur demande</ht>
             <ttc>Sur demande</ttc>
-        <prix>
+        </prix>
     </voiture>
 </voitures>

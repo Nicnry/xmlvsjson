@@ -1,10 +1,9 @@
 # xml vs json
-
+<div align="center">
 <img src="/img/json.png"></img>
-
 <img src="/img/xml.png"></img>
-
 <img src="/img/xml.png"></img>
+</div>
 
 ## Table des matières
 - XML

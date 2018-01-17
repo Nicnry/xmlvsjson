@@ -21,31 +21,31 @@ XML (e**X**tensible **M**arkup **L**anguage) est un langage qui permet de décri
 
 ### Utilisation
 
-Voici un exemple ci dessous en JSON (140 caractères) 
-```json
-{
-	"id": 123,
-	"title": "Object Thinking",
-	"author": "David West",
-	"published": {
-		"by": "Microsoft Press",
-		"year": 2004
+Voici un exemple ci-dessous en JSON (140 caractères) 
+
+	{
+	    "id": 123,
+	    "title": "Object Thinking",
+	    "author": "David West",
+	    "published": {
+	        "by": "Microsoft Press",
+	        "year": 2004
+	    }
 	}
-}
-```
+
 
 Voici maintenant le même exemple mais en XML (167 caractères) 
-```xml
-<?xml version="1.0"?>
-<book id="123">
-	<title>Object Thinking</title>
-	<author>David West</author>
-	<published>
-		<by>Microsoft Press</by>
-		<year>2004</year>
-	</published>
-</book>
-```
+
+	<?xml version="1.0"?>
+	<book id="123">
+	    <title>Object Thinking</title>
+	    <author>David West</author>
+	    <published>
+	        <by>Microsoft Press</by>
+	        <year>2004</year>
+	    </published>
+	</book>
+
 
 C’est assez facile à comparer, le premier exemple est un peu plus court et plus facile à comprendre, il est en plus analysable en JavaScript, alors à besoin d’un XML lourd, vieux de 20 ans ?  
 La raison est que le XML est tout de même utile, c’est un langage très puissant, contrairement à JSON qui n’est qu’un bon format de donnée, utilisé pour transférer des données d’un point A à un point B, il est que plus court et plus lisible.
@@ -55,21 +55,21 @@ La raison est que le XML est tout de même utile, c’est un langage très puiss
 
 Il y a quelques spécificités que nous offre le XML comme :
  
-XPATH.
+#### XPATH
 Afin de récupérer des données comme l’année de publication par exemple, l’avantage est que XPATH 2.0 est un moteur de requête très puissant avec ses propres fonctions, n’importe quelle logique y est acceptée. L’on peut demander combien de livre ont été publié par David West en 2004 et obtenir une réponse. JSON n’est pas proche de ça.
  
-Attributs et espace de noms.
+#### Attributs et espace de noms
 Il est possible de joindre des métadonnées à vos données, comme c’est le cas avec l’id ci-dessus. Les données restent à l’intérieur des balises (comme le nom de l’auteur par exemple) alors que les métadonnées (données sur les données) doivent être placé dans des balises, ce qui aide dans l’organisation et la structuration des informations. Au-dessus ce cela l’on peut définir un espace de nom (indispensable si plusieurs applications travaillent avec le même document XML)
  
-Schémas XML.
+#### Schémas XML
 Après la création d’un XML, que l’on modifie plusieurs fois, que l’on déplace à un endroit. Après toutes les modifications l’on veut s’assurer que la structure n’est pas corrompue. Pour éviter tout désordre dans la structure l’on peut rajouter un schéma que l’on envoie avec le document principal. Tout le monde qui veut travailler avec le document principal va d’abord valider son exactitude en utilisant le schéma.
  
-XSL.
+#### XSL
 L’on peut apporter des modifications au fichier XML sans utiliser de code (Java, Ruby etc.), il suffit de créer un document de transformation XSL et de l’appliquer à votre XML. En sortie, on obtient un nouveau fichier XML. Le XSL est conçu pour des manipulations de données hiérarchiques. Il est beaucoup plus adapté à cette tâche que Java ou toute autre approche POO. Il est possible de transformer un document XML en n’importe quoi, y compris en texte brut ou en HTML
  
 Ce n’est pas une liste complète mais ces quatre caractéristiques permettent à un document d’être ‘’autosuffisant’’. Il peut se valider de lui-même (Schémas XML), il se modifie lui-même (XSL) et donne un accès pratique à ce qui s’y trouve (XPATH)
  
-JSON n'a pas été conçu pour avoir de telles fonctionnalités, même si l’on peut trouver certains outils pour les transformations, JSONPath pour l'interrogation et json-schema pour la validation, ce ne sont que des parodies faibles comparées à ce que XML offre.
+JSON n'a pas été conçu pour avoir de telles fonctionnalités, même si l’on peut trouver certains outils pour les transformations, JSONPath pour l'interrogation et json-schema pour la validation, mais ce ne sont que des parodies faibles comparées à ce que XML offre.
 
 
 ## JSON
@@ -88,103 +88,112 @@ Les règles à suivre pour respecter la syntaxe JSON sont les suivantes:
 - Le accolades {...} contiennent les objets
 - Les crochets [...] contiennent les tableaux
 
-“clef” : “valeur”
-
-Exemple :
-
-```json
-var shop = {
-	"fruits": [
-		{	"pommes": 5,
-			"cerises": 15,
-			"myrtilles": 2
-		},
-		{
-			"chariot": true
-		}
-	]
-}
-
 ```
+“clef” : “valeur”
+```
+
+Voici un exemple de JSON :
+
+	var shop = { 
+		"fruits": [
+	        {    "pommes": 5,
+	            "cerises": 15,
+	            "myrtilles": 2
+	        },
+	        {
+	            "chariot": true
+	        }
+    	]
+	}
+
 
 Nous pouvons afficher l’entier de la variable shop avec un console.log(shop);
-Nous pouvons aussi récupérer des valeures du tableau avec un code JavaScript tel que :
+Nous pouvons aussi récupérer des valeurs du tableau avec un code **JavaScript** tel que :
 
-```javascript
+
+```
 shop.fruits[0].pommes; 
 ```
+
 Cela nous retournera 5.
 
-Il est important de savoir que les valeures JSON doivent être utilisé avec des double quotes ‘’...’’
+*Il est important de savoir que les valeurs JSON doivent être utilisé avec des double quottes ‘’...’’*
 
 ### Traitement des données
 
 #### Echanger des données
 
-Lors de l’échange de données entre un navigateur web et un serveur, les données peuvent seulement être du texte. Le JSON est du texte qui peut ensuite être converti en objet JavaScript. Il est aussi possible de de convertir un object JavaScript en JSON.
+Lors de l’échange de données entre un navigateur web et un serveur, seulement du texte transite (le JSON). Il peut ensuite être converti en objet JavaScript et inversement (objet JavaScript en JSON).
 
 #### Envoyer des données
 
-Si des données sont stocker dans un object JavaScript, il est possible de le convertir en JSON et de l’envoyer au serveur.
+Si des données sont stocker dans un objet JavaScript, il est possible de le convertir en JSON et de l’envoyer au serveur.
 Exemple:
 
-```json
-var myObj = { "name":"John", "age":31, "city":"New York" };
-var myJSON = JSON.stringify(myObj);
-window.location = "demo_json.php?x=" + myJSON; 
-```
+
+	var myObj = { "name":"John", "age":31, "city":"New York" };
+	var myJSON = JSON.stringify(myObj);
+	window.location = "demo_json.php?x=" + myJSON; 
 
 #### Recevoir des données
 
 Si les données reçu sont en JSON, il est possible de les convertir en un objet JavaScript.
 Exemple:
 
-```json
-var myJSON = '{ "name":"John", "age":31, "city":"New York" }';
-var myObj = JSON.parse(myJSON);
-document.getElementById("demo").innerHTML = myObj.name; 
-```
 
-## JSON est comme le XML car
+	var myJSON = '{ "name":"John", "age":31, "city":"New York" }';
+	var myObj = JSON.parse(myJSON);
+	document.getElementById("demo").innerHTML = myObj.name; 
+
+
+## JSON est comme le XML car 
 
 XML et JSON sont similaire car ils sont auto-descriptif (compréhensible par un humain) 
-```xml
-<person> 
-  <age>12</age> 
-  <name>Danielle</name> 
-</person>
-```
-```json
-myJSON = {"age" : 12, "name" : "Danielle"}
-```
 
-XML et JSON sont similaire car ils sont hiérarchique (Valeures dans les valeures)
-XML et JSON sont similaire car ils peuvent être utilisé par un grand nombre de programme
-XML et JSON sont similaire car ils peuvent être récupéré avec une XMLHttpRequest
+XML
 
-Le JSON est plus simple et plus rapide à lire que le XML. Il est possible d’utiliser des tableaux dans le JSON. Le JSON est aussi plus court et n’utilise pas de balise. La différence la plus importante entre le JSON et le XML est que le XML doit utiliser un ‘’parseur’’ XML pour pouvoir être utilisé tandis que le JSON peut être utilisé par une fonction de base de JavaScript.
+	<person> 
+	  <age>12</age> 
+	  <name>Danielle</name> 
+	</person>
+
+JSON
+
+	myJSON = { "age" : 12, "name" : "Danielle"}
+
+
+Similarité entre XML et JSON : 
+
+- Ils sont hiérarchique (Valeurs dans les valeurs)
+- Ils peuvent être utilisé par un grand nombre de programme
+- Ils peuvent être récupéré avec une XMLHttpRequest
 
 ## JSON est différent du XML car
 
 Le JSON est plus simple et plus rapide à lire que le XML. Il est possible d’utiliser des tableaux dans le JSON. Le JSON est aussi plus court et n’utilise pas de balise. La différence la plus importante entre le JSON et le XML est que le XML doit utiliser un ‘’parseur’’ XML pour pouvoir être utilisé tandis que le JSON peut être utilisé par une fonction de base de JavaScript.
 
-## Pourquoi JSON est meilleur que le XML
+## Pourquoi JSON est "meilleur" que le XML
 
-Le XML est plus difficile a utiliser que le JSON. Le JSON est directement utilisable dans un objet JavaScript.
+Le XML est plus lourd a utiliser que le JSON, il nécessite un parseur ainsi qu’un minimum de connaissance. Quant à lui, Le JSON est directement utilisable dans un objet JavaScript et il est plus léger.
+
 Pour l’utilisation d’AJAX, JSON est plus rapide et plus simple à utiliser.
+
 Avec XML:
+
 - Récupérer le document XML
 - Utiliser le DOM XML pour faire une boucle dans le document
 - Extraire les valeurs et les stocker dans des variables
+
 Avec JSON:
+
 - Récupérer la chaine JSON
 - ‘’Parser’’ la chaine JSON
 
-## Gloassaire 
+## Glossaire 
 
-| Mot   | Définition                        			|
+| Mot   | Définition                                    |
 |-------|-------------------------------------------------------|
-| JSON  | **J**ava**S**cript **O**bject **N**otation     	|
-| XML   | E**X**tensible **M**arkup **L**anguage        	|
-| AJAX  | **A**synchronous **J**avaScript **A**nd **X**ML	|
-| DOM   | **D**ocument **O**bject **M**odel             	|
+| JSON  | **J**ava**S**cript **O**bject **N**otation         |
+| XML   | E**X**tensible **M**arkup **L**anguage            |
+| AJAX  | **A**synchronous **J**avaScript **A**nd **X**ML    |
+| DOM   | **D**ocument **O**bject **M**odel                 |

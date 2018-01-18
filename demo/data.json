@@ -1,0 +1,26 @@
+{
+	"course": {
+		"voiture": [
+			{
+				"marque": "Ford",
+				"modele": "GT40",
+				"pilotes": {
+					"pilote": [
+						"Bastien",
+						"Nicolas"
+					]
+				}
+			},
+			{
+				"marque": "Ferrari",
+				"modele": "250 GTO",
+				"pilotes": {
+					"pilote": [
+						"Benjamin",
+						"Kevin"
+					]
+				}
+			}
+		]
+	}
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<voiture>
+    <marque>Ford</marque>
+    <modele>GT40</modele>
+    <pilotes>
+        <pilote>Bastien</pilote>
+        <pilote>Nicolas</pilote>
+    </pilotes>
+</voiture>
+<voiture>
+    <marque>Ferrari</marque>
+    <modele>250 GTO</modele>
+    <pilotes>
+        <pilote>Benjamin</pilote>
+        <pilote>Kevin</pilote>
+    </pilotes>
+</voiture>

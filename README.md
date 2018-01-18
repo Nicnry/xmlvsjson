@@ -48,26 +48,25 @@ Voici maintenant le même exemple mais en XML (167 caractères)
 
 
 C’est assez facile à comparer, le premier exemple est un peu plus court et plus facile à comprendre, il est en plus analysable en JavaScript, alors à besoin d’un XML lourd, vieux de 20 ans ?  
-La raison est que le XML est tout de même utile, c’est un langage très puissant, contrairement à JSON qui n’est qu’un bon format de donnée, utilisé pour transférer des données d’un point A à un point B, il est que plus court et plus lisible.
-
+La raison est que le XML est tout de même utile, c’est un langage très puissant. Contrairement à JSON, qui est un bon format de donnée, uniquement. Il est principalement utilisé pour transférer des données d’un point A à un point B, il n’est que plus court et plus lisible que le XML.
 
 ### Particularités
 
 Il y a quelques spécificités que nous offre le XML comme :
  
 #### XPATH
-Afin de récupérer des données comme l’année de publication par exemple, l’avantage est que XPATH 2.0 est un moteur de requête très puissant avec ses propres fonctions, n’importe quelle logique y est acceptée. L’on peut demander combien de livre ont été publié par David West en 2004 et obtenir une réponse. JSON n’est pas proche de ça.
+Afin de récupérer des données comme l’année de publication par exemple, l’avantage est que XPATH 2.0 est un moteur de requête très puissant avec ses propres fonctions, n’importe quelle logique y est acceptée. L’on peut demander combien de livre ont été publié par David West en 2004 et obtenir une réponse.
  
 #### Attributs et espace de noms
-Il est possible de joindre des métadonnées à vos données, comme c’est le cas avec l’id ci-dessus. Les données restent à l’intérieur des balises (comme le nom de l’auteur par exemple) alors que les métadonnées (données sur les données) doivent être placé dans des balises, ce qui aide dans l’organisation et la structuration des informations. Au-dessus ce cela l’on peut définir un espace de nom (indispensable si plusieurs applications travaillent avec le même document XML)
+Il est possible de joindre des métadonnées à vos données, comme c’est le cas avec l’id ci-dessus. Les données restent à l’intérieur des balises (comme le nom de l’auteur par exemple) alors que les métadonnées (données sur les données) doivent être placé dans des balises, ce qui aide dans l’organisation et la structuration des informations. Au-dessus de cela, l’on peut aussi définir un espace de nom (indispensable si plusieurs applications travaillent avec le même document XML)
  
 #### Schémas XML
-Après la création d’un XML, que l’on modifie plusieurs fois, que l’on déplace à un endroit. Après toutes les modifications l’on veut s’assurer que la structure n’est pas corrompue. Pour éviter tout désordre dans la structure l’on peut rajouter un schéma que l’on envoie avec le document principal. Tout le monde qui veut travailler avec le document principal va d’abord valider son exactitude en utilisant le schéma.
+Suite à la création d’un XML, qui a été modifié plusieurs fois et déplacé à plusieurs endroits, on aimerait s’assurer que la structure n’est pas corrompue. Pour éviter tout désordre dans la structure, on rajoute un schéma qu’on envoie avec le document principal. Tout le monde qui veut travailler avec le document principal va d’abord valider son exactitude en utilisant le schéma.
  
 #### XSL
-L’on peut apporter des modifications au fichier XML sans utiliser de code (Java, Ruby etc.), il suffit de créer un document de transformation XSL et de l’appliquer à votre XML. En sortie, on obtient un nouveau fichier XML. Le XSL est conçu pour des manipulations de données hiérarchiques. Il est beaucoup plus adapté à cette tâche que Java ou toute autre approche POO. Il est possible de transformer un document XML en n’importe quoi, y compris en texte brut ou en HTML
+XML propose d’effectuer des modifications dans le fichier sans utiliser de code (Java, Ruby etc.), il suffit de créer un document de transformation XSL et de l’appliquer à votre XML. En sortie, on obtient un nouveau fichier XML. Il est beaucoup plus adapté à la manipulation de données que Java ou toute autre approche POO. Il est aussi possible de transformer un document XML en n’importe quoi, y compris en texte brut ou en HTML
  
-Ce n’est pas une liste complète mais ces quatre caractéristiques permettent à un document d’être ‘’autosuffisant’’. Il peut se valider de lui-même (Schémas XML), il se modifie lui-même (XSL) et donne un accès pratique à ce qui s’y trouve (XPATH)
+Ce n’est pas une liste complète mais ces quatre caractéristiques permettent à un document d’être ‘’autosuffisant’’. Il peut se valider de lui-même (Schémas XML), il se modifie lui-même (XSL) et donne un accès pratique à ce qui s’y trouve (XPATH).
  
 JSON n'a pas été conçu pour avoir de telles fonctionnalités, même si l’on peut trouver certains outils pour les transformations, JSONPath pour l'interrogation et json-schema pour la validation, mais ce ne sont que des parodies faibles comparées à ce que XML offre.
 
@@ -127,9 +126,8 @@ Lors de l’échange de données entre un navigateur web et un serveur, seulemen
 
 #### Envoyer des données
 
-Si des données sont stocker dans un objet JavaScript, il est possible de le convertir en JSON et de l’envoyer au serveur.
+Si des données sont stockées dans un objet JavaScript, il est possible de le convertir en JSON et de l’envoyer au serveur.
 Exemple:
-
 
 	var myObj = { "name":"John", "age":31, "city":"New York" };
 	var myJSON = JSON.stringify(myObj);
@@ -137,9 +135,8 @@ Exemple:
 
 #### Recevoir des données
 
-Si les données reçu sont en JSON, il est possible de les convertir en un objet JavaScript.
+Si les données reçues sont en JSON, il est possible de les convertir en un objet JavaScript.
 Exemple:
-
 
 	var myJSON = '{ "name":"John", "age":31, "city":"New York" }';
 	var myObj = JSON.parse(myJSON);
@@ -170,11 +167,12 @@ Similarité entre XML et JSON :
 
 ## JSON est différent du XML car
 
-Le JSON est plus simple et plus rapide à lire que le XML. Il est possible d’utiliser des tableaux dans le JSON. Le JSON est aussi plus court et n’utilise pas de balise. La différence la plus importante entre le JSON et le XML est que le XML doit utiliser un ‘’parseur’’ XML pour pouvoir être utilisé tandis que le JSON peut être utilisé par une fonction de base de JavaScript.
+Le JSON est plus simple et plus rapide à lire que le XML. Il est possible d’utiliser des tableaux dans le JSON. Il est aussi plus court et n’utilise pas de balise. 
+La différence la plus importante entre le JSON et le XML est que le XML doit utiliser un ‘’parseur’’ XML pour pouvoir être utilisé tandis que le JSON peut être utilisé par une fonction de base de JavaScript.
 
 ## Pourquoi JSON est "meilleur" que le XML
 
-Le XML est plus lourd a utiliser que le JSON, il nécessite un parseur ainsi qu’un minimum de connaissance. Quant à lui, Le JSON est directement utilisable dans un objet JavaScript et il est plus léger.
+Le XML est plus lourd à utiliser que le JSON, il nécessite un parseur ainsi qu’un minimum de connaissance. Quant à lui, le JSON est directement utilisable dans un objet JavaScript et il est plus léger.
 
 Pour l’utilisation d’AJAX, JSON est plus rapide et plus simple à utiliser.
 
